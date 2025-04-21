@@ -1,0 +1,38 @@
+# ============ RAW DATA ============
+
+# Ignore raw data files (exports or third-party downloads)
+*.zip
+*.json
+*.xml
+
+# Ignore manually downloaded health exports (e.g., Apple Health)
+export.xml.zip
+measurements.json
+
+# Ignore folders used for local-only processing
+/raw_data/
+
+# ============ SYSTEM FILES ============
+
+# macOS system files
+.DS_Store
+
+# Jupyter notebook auto-generated checkpoints
+.ipynb_checkpoints/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Backup or versioned files
+*.bak
+*.old
+*.orig
+
+# Virtual environments or credentials
+.env
+.venv/
