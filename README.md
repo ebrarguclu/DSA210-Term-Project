@@ -1,8 +1,13 @@
 # DSA210-Term-Project
 
-I am a student at **Sabancı University**, located in **Gebze, Turkey**, and this is my DSA210 term project.
+I am a student at **Sabancı University**, located in **Gebze, Turkey**, and this is my DSA2
+10 term project.
 
 Gebze is one of the industrial regions of Turkey and frequently experiences poor air quality. On April 21, 2025, air quality in Gebze was reported as **“Poor”**, with **PM2.5 levels at 27 µg/m³** and **NO₂ levels at 32 µg/m³**, according to AccuWeather. These numbers raise immediate concerns about the long-term effects of such exposure. While we often discuss the physical impacts of air pollution, **what about its impact on mental health?**
+
+
+<img width="644" alt="Screenshot 2025-04-21 at 7 54 54 PM" src="https://github.com/user-attachments/assets/62bdcf8d-8107-4f33-a4aa-5c7db6fbd04e" />
+
 
 As a university student living in a region with constant exposure to air pollutants, I wanted to explore a question that directly affects not only me but potentially millions of people around the world:
 
