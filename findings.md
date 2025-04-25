@@ -47,6 +47,31 @@ The y-axis displays the Top 20 countries ranked by this pollution average.
 
 The countries are sorted in descending order, with Mongolia, Kuwait, and Bangladesh appearing at the top, indicating the highest pollution levels according to the combined metric.
 
+
+## Country Membership in Top 20 Lists (Intersection Analysis)
+![image](https://github.com/user-attachments/assets/2246516a-8fea-4ac7-b3e1-87ffea9fe452)
+
+Purpose:
+This plot visualizes the overlap in country rankings across the Top 20 lists for pollution, anxiety, and depression. It helps identify how many countries are common to two or more mental health and environmental risk categories.
+
+Chart Description:
+
+The x-axis shows different combinations of the three categories (depression, anxiety, and pollution).
+Each vertical line in the bottom section (beneath the bars) indicates a specific intersection:
+
+A filled black dot means that category is included in the combination.
+
+An empty spot (no dot) means that category is not included.
+
+For example, the bar above the dot combination for all three filled circles (on the rightmost side) shows countries that appear in all three top 20 lists.
+
+The y-axis represents the intersection size, i.e., the number of countries that appear in the selected combination of categories.
+
+Numbers above each bar also indicate the count and percentage of countries in that group relative to the total.
+
+Bottom Rectangle Section (Legend): This section lists each category—Depression, Anxiety, and Pollution—and the number of countries appearing in the top 20 for each (20 countries per category).
+It serves as a reference key for understanding the dot combinations shown above.
+
 ## PM2.5 vs Depression (%)
 ![image](https://github.com/user-attachments/assets/ff1b6e68-1974-42f3-8543-a1c8e53e42bf)
 Pearson r: -0.22
@@ -123,11 +148,6 @@ Statistical Decision: Reject the null hypothesis.
 
 Comment: This indicates a statistically significant negative relationship. Countries with higher overall pollution levels tend to have lower anxiety disorder prevalence, suggesting potentially reversed causation or missing confounding variables.
 
-
-![image](https://github.com/user-attachments/assets/2246516a-8fea-4ac7-b3e1-87ffea9fe452)
-- *Intersection Analysis**: Only Lebanon appears in the top 20 for all three categories (pollution, anxiety, depression).
-
-- *Comment**: Most countries are only top-ranked in one or two categories, showing limited overlap between mental health burden and pollution exposure. This again highlights the complexity and multi-factorial nature of mental health disorders.
 
 ## Scatter Plots – Pollution Avg vs Depression/Anxiety
 ![image](https://github.com/user-attachments/assets/84f83d4b-6c5a-48c3-948e-88c9996a0bbc)
