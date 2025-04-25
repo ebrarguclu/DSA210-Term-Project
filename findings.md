@@ -1,6 +1,34 @@
 ## Findings
 All analyses below are based on a 0.05 significance level. If the p-value < 0.05, the null hypothesis is rejected. Otherwise, we fail to reject the null hypothesis. Additionally, the strength and direction of the correlation are interpreted using the Pearson correlation coefficient (r).
 
+## Top 20 Bar Charts
+
+## Top 20 Countries by Anxiety Disorder Rates
+ ![image](https://github.com/user-attachments/assets/9f02a972-08ed-4664-aefe-bef8eb0e3f61)
+Dataset Used: Contains country-level percentages of people experiencing anxiety disorders.
+
+Chart Description:
+
+The x-axis represents the percentage of people suffering from anxiety disorders in each country.
+
+The y-axis lists the Top 20 countries with the highest anxiety rates.
+
+The chart is sorted in descending order, with New Zealand having the highest anxiety disorder rate, followed by Norway and France.
+
+## Top 20 Countries by Depression Rates
+ ![image](https://github.com/user-attachments/assets/d55a3033-2100-4ac1-b1be-391bb26dbd60)
+ Dataset Used: Contains country-level data on the prevalence of depression.
+
+Chart Description:
+
+The x-axis represents the percentage of people affected by depression in each country.
+
+The y-axis lists the Top 20 countries with the highest reported depression rates.
+
+The chart is sorted from highest to lowest, with Finland, Australia, and Portugal leading the list.
+
+
+
 
 ## PM2.5 vs Depression (%)
 ![image](https://github.com/user-attachments/assets/ff1b6e68-1974-42f3-8543-a1c8e53e42bf)
@@ -80,11 +108,8 @@ Comment: This indicates a statistically significant negative relationship. Count
 
 
 ## Top 20 Bar Charts
- ![image](https://github.com/user-attachments/assets/9f02a972-08ed-4664-aefe-bef8eb0e3f61)
-
- ![image](https://github.com/user-attachments/assets/d55a3033-2100-4ac1-b1be-391bb26dbd60)
-
- ![image](https://github.com/user-attachments/assets/4224807d-736d-4742-82c9-c9f3a4adbd35)
+ 
+![image](https://github.com/user-attachments/assets/4224807d-736d-4742-82c9-c9f3a4adbd35)
 
 Anxiety Rates: Highest in New Zealand, Norway, France. Indicates a cluster of developed nations with high anxiety.
 
