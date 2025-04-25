@@ -4,7 +4,8 @@ All analyses below are based on a 0.05 significance level. If the p-value < 0.05
 ## Top 20 Bar Charts
 
 ## Top 20 Countries by Anxiety Disorder Rates
- ![image](https://github.com/user-attachments/assets/9f02a972-08ed-4664-aefe-bef8eb0e3f61)
+![image](https://github.com/user-attachments/assets/9f02a972-08ed-4664-aefe-bef8eb0e3f61)
+
 Dataset Used: Contains country-level percentages of people experiencing anxiety disorders.
 
 Chart Description:
@@ -17,7 +18,8 @@ The chart is sorted in descending order, with New Zealand having the highest anx
 
 ## Top 20 Countries by Depression Rates
  ![image](https://github.com/user-attachments/assets/d55a3033-2100-4ac1-b1be-391bb26dbd60)
- Dataset Used: Contains country-level data on the prevalence of depression.
+ 
+Dataset Used: Contains country-level data on the prevalence of depression.
 
 Chart Description:
 
@@ -27,8 +29,23 @@ The y-axis lists the Top 20 countries with the highest reported depression rates
 
 The chart is sorted from highest to lowest, with Finland, Australia, and Portugal leading the list.
 
+## Top 20 Countries by Pollution Average (PM2.5 + NO₂)
 
+![image](https://github.com/user-attachments/assets/4224807d-736d-4742-82c9-c9f3a4adbd35)
 
+Dataset Description:
+The dataset includes country-level measurements of PM2.5 (fine particulate matter) and NO₂ (nitrogen dioxide) pollution levels.
+
+Data Processing:
+A weighted average of PM2.5 and NO₂ values is computed for each country to produce a single representative pollution score. This combined metric is used to reflect the overall pollution burden by integrating the impact of both pollutants.
+
+Chart Description:
+
+The x-axis represents the computed pollution average for each country.
+
+The y-axis displays the Top 20 countries ranked by this pollution average.
+
+The countries are sorted in descending order, with Mongolia, Kuwait, and Bangladesh appearing at the top, indicating the highest pollution levels according to the combined metric.
 
 ## PM2.5 vs Depression (%)
 ![image](https://github.com/user-attachments/assets/ff1b6e68-1974-42f3-8543-a1c8e53e42bf)
@@ -106,18 +123,6 @@ Statistical Decision: Reject the null hypothesis.
 
 Comment: This indicates a statistically significant negative relationship. Countries with higher overall pollution levels tend to have lower anxiety disorder prevalence, suggesting potentially reversed causation or missing confounding variables.
 
-
-## Top 20 Bar Charts
- 
-![image](https://github.com/user-attachments/assets/4224807d-736d-4742-82c9-c9f3a4adbd35)
-
-Anxiety Rates: Highest in New Zealand, Norway, France. Indicates a cluster of developed nations with high anxiety.
-
-Depression Rates: Highest in Finland, Australia, Portugal. Similar to anxiety, Western countries are more represented.
-
-Pollution Average: Highest in Mongolia, Kuwait, Bangladesh. These are geographically and economically diverse countries, showing pollution burden is not confined to one region.
-
-Comment: Visually comparing the top countries across mental health and pollution shows limited overlap, supporting weak correlations in some cases.
 
 ![image](https://github.com/user-attachments/assets/2246516a-8fea-4ac7-b3e1-87ffea9fe452)
 - *Intersection Analysis**: Only Lebanon appears in the top 20 for all three categories (pollution, anxiety, depression).
