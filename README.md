@@ -132,11 +132,12 @@ To better understand the relationships observed during hypothesis testing, the f
 
 #### 1. Depression (%) vs. Combined Pollution
 
-<img src="figures/depression_vs_pollution.png" alt="Depression vs Pollution" width="600"/>
+![depression_vs_pollution](https://github.com/user-attachments/assets/e5b66804-fabc-44ae-a1c8-fced2909e837)
 
 #### 2. Anxiety Disorders (%) vs. Combined Pollution
 
-<img src="figures/anxiety_vs_pollution.png" alt="Anxiety vs Pollution" width="600"/>
+![anxiety_vs_pollution](https://github.com/user-attachments/assets/4c64162b-f112-4dfe-896e-8fb67b34f8ea)
+
 
 These plots visually support the hypothesis test results. The anxiety plot shows a clearer downward trend, aligning with the statistically significant moderate negative correlation, while the depression plot reveals a weaker and less consistent pattern.
 
@@ -151,6 +152,7 @@ While the second hypothesis shows a statistically significant result, the negati
 - Bias in modeled mental health prevalence data
 
 These insights highlight the importance of further analysis using multivariate models and potentially city-level or individual-level datasets for more causal understanding.
+
 
 
 
@@ -269,58 +271,6 @@ Based on existing literature and preliminary trends:
 - Bipolar and eating disorders may show **weaker or no correlation**
 
 These findings could indicate that **chronic air pollution exposure** is not only a physical health risk but also a **major psychological stressor**.
-
----
-
-##  Summary of Findings
-
-All six hypotheses were tested using **Pearson correlation** at a **95% confidence level (α = 0.05)**. Below is a summary of the correlation strength (r), p-values, and statistical interpretations:
-
----
-
-### **H1: PM2.5 Levels and Depression**
-- **r = -0.22**
-- **p = 0.09918**
-- **Conclusion**: *Fail to reject H₀*. No significant correlation between PM2.5 and depression.  
-  Although a weak negative trend exists, the result is **not statistically significant** at the 0.05 level.
-
----
-
-### **H2: PM2.5 Levels and Anxiety Disorders**
-- **r = -0.42**
-- **p = 0.0011**
-- **Conclusion**: *Reject H₀*. There is a **moderate negative correlation** between PM2.5 levels and anxiety disorder prevalence.  
-  This result is **statistically significant**, though the inverse direction is unexpected and worth further exploration.
-
----
-
-### **H3: NO₂ Levels and Depression**
-- **r = -0.10**
-- **p = 0.45469**
-- **Conclusion**: *Fail to reject H₀*. No significant correlation between NO₂ and depression.  
-  The correlation is negligible and **not statistically significant**.
-
----
-
-### **H4: NO₂ Levels and Anxiety Disorders**
-- **r = -0.17**
-- **p = 0.20127**
-- **Conclusion**: *Fail to reject H₀*. Weak negative correlation, but **not statistically significant**.
-
----
-
-### **H5: Combined Pollution and Depression**
-- **r = -0.19**
-- **p = 0.1554**
-- **Conclusion**: *Fail to reject H₀*. The combined pollution score does **not significantly predict** depression rates.
-
----
-
-### **H6: Combined Pollution and Anxiety Disorders**
-- **r = -0.36**
-- **p = 0.00664**
-- **Conclusion**: *Reject H₀*. There is a **statistically significant moderate negative correlation** between combined pollution (PM2.5 + NO₂) and anxiety.  
-  The direction again appears **negative**, which may indicate confounding influences or reverse effects in different regions.
 
 ---
 
