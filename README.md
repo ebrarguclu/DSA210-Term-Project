@@ -82,7 +82,7 @@ This project uses two datasets from **Kaggle**, both smaller than 2 MB and ful
 
 ---
 
-## 🧪 Hypotheses
+##  Hypotheses
 
 ## ***This project will examine the following six statistical hypotheses:***
 
@@ -119,6 +119,95 @@ This project uses two datasets from **Kaggle**, both smaller than 2 MB and ful
 ### **H6: Combined Air Pollution and Anxiety Disorders**
 > **H₀:** The weighted average of PM2.5 and NO₂ is not significantly correlated with anxiety disorder rates.  
 > **H₁:** Higher combined air pollution levels are associated with higher anxiety disorder rates.
+
+
+Machine Learning Techniques
+---------------------------
+
+This section presents the machine learning models used to investigate whether air pollution indicators (PM2.5, NO₂, and their weighted average) can predict the prevalence of depression and anxiety disorders across countries.
+
+* * *
+
+### 1. Linear Regression: Predicting Mental Health from Air Pollution
+
+*   **Objective**: To test if air pollution indicators can linearly explain the prevalence of depression and anxiety disorders.
+*   **Why This Model?** A simple, interpretable model that helps identify direct linear relationships.
+*   **Features**: PM2.5, NO₂, Pollution Weighted Average
+*   **Targets**: Depression (%), Anxiety disorders (%)
+
+#### Results
+
+| Target     | R² Score | RMSE  | MAE  |
+|------------|----------|--------|------|
+| Depression | 0.05     | 0.71   | 0.60 |
+| Anxiety    | -0.10    | 1.25   | 1.05 |
+
+#### Outcome
+
+The linear regression models indicate very weak or no relationship between air pollution and mental health outcomes.
+
+*   Only 5% of the variation in depression can be explained.
+*   A negative R² for anxiety suggests the model performs worse than a naive mean prediction.
+
+**Conclusion**: Air pollution alone does not significantly predict mental health rates on a country level.
+
+#### Actual vs Predicted Anxiety (Linear Regression)
+
+![image](https://github.com/user-attachments/assets/53422f68-dd31-48e5-8360-ca1ecbae3358)
+
+* * *
+
+### 2. Random Forest Regressor: Capturing Nonlinear Effects
+
+*   **Objective**: To model complex, nonlinear relationships between pollutants and mental health disorders.
+*   **Why This Model?** Non-parametric, robust, and provides variable importance.
+*   **Features**: PM2.5, NO₂, Pollution Weighted Average
+*   **Targets**: Depression (%), Anxiety disorders (%)
+
+#### Results
+
+| Target     | R² Score | RMSE  | MAE  |
+|------------|----------|--------|------|
+| Depression | 0.54     | 0.49   | 0.39 |
+| Anxiety    | 0.35     | 0.97   | 0.73 |
+
+#### Outcome
+
+Random Forest shows moderate predictive ability, especially for depression.
+
+*   Explains 54% of variance in depression rates.
+*   Explains 35% of variance in anxiety rates.
+
+**Conclusion**: Air pollution may influence mental health, particularly depression, but it's likely not the sole driver.
+
+* * *
+
+### 3. Ridge Regression: A Regularized Linear Baseline
+
+*   **Objective**: To improve upon basic linear regression by mitigating multicollinearity.
+*   **Why This Model?** Regularizes coefficients of correlated features (e.g., PM2.5 and NO₂).
+*   **Target**: Depression (%)
+
+#### Results
+
+| Target     | R² Score | RMSE  | MAE  |
+|------------|----------|--------|------|
+| Depression | 0.05     | 0.71   | 0.60 |
+
+#### Outcome
+
+Ridge regression yields no performance improvement over standard linear regression.
+
+**Conclusion**: Regularization alone is not enough — the lack of linear relationship remains the limiting factor.
+
+* * *
+
+### Summary
+
+*   Linear models (Linear/Ridge) are insufficient for capturing the complexity of the relationship between air pollution and mental health.
+*   Random Forest outperforms, especially for depression, suggesting a moderate nonlinear link.
+*   Anxiety appears to be less influenced by pollution, possibly due to other social, cultural, or economic factors not included in this dataset.
+
 
 ## Analysis Plan
 
