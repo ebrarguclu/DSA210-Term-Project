@@ -263,7 +263,21 @@ The project will follow a structured pipeline:
 
 ---
 
-## 🔍 Expected Findings
+##  Findings
+
+
+The analysis revealed the following key insights:
+
+- **Depression and Air Pollution**: A statistically significant moderate **negative correlation** was found between pollution levels and depression prevalence (r = -0.21, p = 0.0004). This contradicts initial expectations and may indicate the influence of confounding factors.
+
+- **Anxiety and Air Pollution**: A stronger negative correlation was observed (r = -0.34, p < 0.00000001), also statistically significant. This trend suggests complex regional or socioeconomic interactions behind reported anxiety rates.
+
+- **Machine Learning Models**:
+  - **Random Forest Regressor** was the most effective model, explaining **54% of the variance in depression rates** and **35% for anxiety**.
+  - **Linear and Ridge Regression** performed poorly, indicating that mental health outcomes are **not well explained by simple linear relationships** with pollution data.
+
+- **Visual trends** confirm a clearer downward pattern for anxiety, with depression showing weaker signal strength.
+
 
 Based on existing literature and preliminary trends:
 - PM2.5 is expected to have a **positive correlation** with both depression and anxiety
