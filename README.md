@@ -84,41 +84,74 @@ This project uses two datasets from **Kaggle**, both smaller than 2 MB and ful
 
 ##  Hypotheses
 
-## ***This project will examine the following six statistical hypotheses:***
-
-### **H1: PM2.5 Levels and Depression**
-> **H₀:** PM2.5 concentration does not significantly correlate with depression rates.  
-> **H₁:** Higher PM2.5 levels are associated with higher depression rates.
+This project explores whether country-level air pollution indicators (PM2.5 and NO₂) are statistically associated with mental health disorder prevalence, specifically depression and anxiety. The core analysis uses a combined pollution metric (the average of PM2.5 and NO₂) and examines its relationship with two dependent variables: depression (%) and anxiety disorders (%). The hypotheses were tested using Pearson correlation coefficients and evaluated at a 95% confidence level (α = 0.05).
 
 ---
 
-### **H2: NO₂ Levels and Anxiety Disorders**
-> **H₀:** NO₂ concentration does not significantly correlate with anxiety disorder rates.  
-> **H₁:** Higher NO₂ levels are associated with higher anxiety disorder rates.
+### 1. Combined Air Pollution and Depression
+
+**Hypothesis:** Higher air pollution levels are associated with higher depression prevalence across countries.
+
+- **Null Hypothesis (H₀):** There is no significant correlation between the weighted average of PM2.5 and NO₂ and depression rates.
+- **Alternative Hypothesis (H₁):** Higher combined air pollution is significantly associated with higher depression rates.
+
+**Test Used:** Pearson correlation  
+**Results:**
+- Correlation coefficient (r): -0.19
+- P-value: 0.1554
+
+**Conclusion:**  
+*Fail to reject the null hypothesis.*  
+There is no statistically significant relationship between combined air pollution and depression rates (p > 0.05).  
+Although a weak negative trend was observed, it is not sufficient to confirm a linear association between pollutant levels and depression prevalence at the global level.
 
 ---
 
-### **H3: PM2.5 Levels and Anxiety Disorders**
-> **H₀:** PM2.5 levels do not correlate with anxiety disorder prevalence.  
-> **H₁:** Higher PM2.5 exposure is associated with increased anxiety disorder prevalence.
+### 2. Combined Air Pollution and Anxiety Disorders
+
+**Hypothesis:** Higher air pollution levels are associated with higher anxiety prevalence across countries.
+
+- **Null Hypothesis (H₀):** There is no significant correlation between the weighted average of PM2.5 and NO₂ and anxiety disorder rates.
+- **Alternative Hypothesis (H₁):** Higher combined air pollution is significantly associated with higher anxiety disorder rates.
+
+**Test Used:** Pearson correlation  
+**Results:**
+- Correlation coefficient (r): -0.36
+- P-value: 0.00664
+
+**Conclusion:**  
+*Reject the null hypothesis.*  
+There is a statistically significant moderate negative correlation between combined pollution levels and anxiety rates (p < 0.05).  
+Interestingly, the direction of the correlation is negative, which contradicts common expectations. This may be due to confounding regional variables (e.g., economic stress, healthcare systems, or cultural differences in diagnosis/reporting).
 
 ---
 
-### **H4: NO₂ Levels and Depression**
-> **H₀:** NO₂ concentration does not significantly correlate with depression rates.  
-> **H₁:** Higher NO₂ exposure is associated with higher depression rates.
+### Visualization
+
+To better understand the relationships observed during hypothesis testing, the following scatter plots were created. Each plot includes a regression line to show the trend between combined pollution levels and mental health outcomes:
+
+#### 1. Depression (%) vs. Combined Pollution
+
+<img src="figures/depression_vs_pollution.png" alt="Depression vs Pollution" width="600"/>
+
+#### 2. Anxiety Disorders (%) vs. Combined Pollution
+
+<img src="figures/anxiety_vs_pollution.png" alt="Anxiety vs Pollution" width="600"/>
+
+These plots visually support the hypothesis test results. The anxiety plot shows a clearer downward trend, aligning with the statistically significant moderate negative correlation, while the depression plot reveals a weaker and less consistent pattern.
 
 ---
 
-### **H5: Combined Air Pollution and Depression**
-> **H₀:** The weighted average of PM2.5 and NO₂ is not significantly correlated with depression rates.  
-> **H₁:** Higher combined air pollution levels are associated with higher depression rates.
+### Interpretation Note
 
----
+While the second hypothesis shows a statistically significant result, the negative direction warrants deeper exploration. Potential explanations include:
 
-### **H6: Combined Air Pollution and Anxiety Disorders**
-> **H₀:** The weighted average of PM2.5 and NO₂ is not significantly correlated with anxiety disorder rates.  
-> **H₁:** Higher combined air pollution levels are associated with higher anxiety disorder rates.
+- Unaccounted confounders (e.g., socioeconomic indicators, climate)
+- Reverse causality or ecological fallacy in country-level analysis
+- Bias in modeled mental health prevalence data
+
+These insights highlight the importance of further analysis using multivariate models and potentially city-level or individual-level datasets for more causal understanding.
+
 
 
 Machine Learning Techniques
