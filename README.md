@@ -199,6 +199,12 @@ The linear regression models indicate very weak or no relationship between air p
 *   **Features**: PM2.5, NO₂, Pollution Weighted Average
 *   **Targets**: Depression (%), Anxiety disorders (%)
 
+![rf_depression_actual_vs_pred](https://github.com/user-attachments/assets/cb68ac70-5354-4493-897c-b72092a9a36a)
+
+
+![rf_anxiety_actual_vs_pred](https://github.com/user-attachments/assets/654254d8-97de-4d4f-8d41-5cb5a777403f)
+
+
 #### Results
 
 | Target     | R² Score | RMSE  | MAE  |
