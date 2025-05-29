@@ -239,23 +239,44 @@ Random Forest shows moderate predictive ability, especially for depression.
 
 * * *
 
-### 3. Ridge Regression: A Regularized Linear Baseline
+### 3.Gradient Boosted Trees: Learning from Residuals
 
-*   **Objective**: To improve upon basic linear regression by mitigating multicollinearity.
-*   **Why This Model?** Regularizes coefficients of correlated features (e.g., PM2.5 and NO₂).
-*   **Target**: Depression (%)
+**Objective:**  
+To improve predictive accuracy by sequentially correcting the errors of previous models, allowing the algorithm to learn complex patterns from the data.
 
-#### Results
+**Why This Model?**  
+Gradient Boosted Trees build an ensemble of shallow decision trees, where each new tree improves on the residual errors of the previous one. This method is highly effective for tabular data and is known for strong performance on small-to-medium datasets with complex relationships.
 
-| Target     | R² Score | RMSE  | MAE  |
-|------------|----------|--------|------|
-| Depression | 0.05     | 0.71   | 0.60 |
+**Features Used:**  
+- `PM2.5`, `NO₂`, `PM10`
 
-#### Outcome
+**Targets:**  
+- `Depression (%)`  
+- `Anxiety disorders (%)`
 
-Ridge regression yields no performance improvement over standard linear regression.
+---
 
-**Conclusion**: Regularization alone is not enough — the lack of linear relationship remains the limiting factor.
+### Results
+
+| Target     | R² Score | RMSE   | MAE   |
+|------------|----------|--------|--------|
+| Depression | 0.53     | 0.50   | 0.40   |
+| Anxiety    | 0.28     | 1.02   | 0.72   |
+
+---
+
+
+### Interpretation
+
+Gradient Boosted Trees achieved an **R² score of 0.53** for depression, meaning it explained **53% of the variance** in depression prevalence across countries. This matches the performance of Random Forest and confirms that pollution data holds meaningful predictive value for depression rates.
+
+For anxiety, the model reached an **R² of 0.28**, showing better performance than earlier linear models, but still moderate. This indicates that while pollution may contribute to anxiety disorders, other variables not present in the dataset likely play a significant role.
+
+---
+
+### Conclusion
+
+Gradient Boosted Trees provide a strong, flexible modeling approach for predicting mental health outcomes based on environmental data. The results suggest that air pollution is a contributing factor to depression and, to a lesser extent, anxiety at the country level. This model reinforces the need for nonlinear approaches when dealing with real-world health and environmental data.
 
 * * *
 
@@ -299,7 +320,6 @@ The analysis revealed the following key insights:
 Based on existing literature and preliminary trends:
 - PM2.5 is expected to have a **positive correlation** with both depression and anxiety
 - NO₂ exposure is also anticipated to affect **anxiety prevalence** more strongly
-- Bipolar and eating disorders may show **weaker or no correlation**
 
 These findings could indicate that **chronic air pollution exposure** is not only a physical health risk but also a **major psychological stressor**.
 
