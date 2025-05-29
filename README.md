@@ -259,11 +259,6 @@ Ridge regression yields no performance improvement over standard linear regressi
 
 * * *
 
-### Summary
-
-*   Linear models (Linear/Ridge) are insufficient for capturing the complexity of the relationship between air pollution and mental health.
-*   Random Forest outperforms, especially for depression, suggesting a moderate nonlinear link.
-*   Anxiety appears to be less influenced by pollution, possibly due to other social, cultural, or economic factors not included in this dataset.
 
 
 ## Analysis Plan
