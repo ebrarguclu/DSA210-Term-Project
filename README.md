@@ -163,32 +163,48 @@ This section presents the machine learning models used to investigate whether ai
 
 * * *
 
-### 1. Linear Regression: Predicting Mental Health from Air Pollution
+## 1. Support Vector Regression (SVR): Modeling Complex Nonlinear Effects
 
-*   **Objective**: To test if air pollution indicators can linearly explain the prevalence of depression and anxiety disorders.
-*   **Why This Model?** A simple, interpretable model that helps identify direct linear relationships.
-*   **Features**: PM2.5, NO₂, Pollution Weighted Average
-*   **Targets**: Depression (%), Anxiety disorders (%)
+**Objective:**  
+To test if nonlinear relationships exist between air pollution indicators and mental health disorder prevalence using a robust, margin-based regression model.
 
-#### Results
+**Why This Model?**  
+Support Vector Regression (SVR) is well-suited for small-to-medium datasets and excels at capturing nonlinear patterns through kernel functions. In this project, the Radial Basis Function (RBF) kernel was used to map the input space into a higher-dimensional feature space, enabling the model to detect more complex relationships between pollutants and mental health outcomes.
 
-| Target     | R² Score | RMSE  | MAE  |
-|------------|----------|--------|------|
-| Depression | 0.05     | 0.71   | 0.60 |
-| Anxiety    | -0.10    | 1.25   | 1.05 |
+**Features Used:**  
+- `PM2.5`, `NO₂`, `PM10`
 
-#### Outcome
+**Targets:**  
+- `Depression (%)`  
+- `Anxiety disorders (%)`
 
-The linear regression models indicate very weak or no relationship between air pollution and mental health outcomes.
+---
 
-*   Only 5% of the variation in depression can be explained.
-*   A negative R² for anxiety suggests the model performs worse than a naive mean prediction.
+### Results
 
-**Conclusion**: Air pollution alone does not significantly predict mental health rates on a country level.
+| Target     | R² Score | RMSE   | MAE   |
+|------------|----------|--------|--------|
+| Depression | 0.52     | 0.50   | 0.41   |
+| Anxiety    | 0.14     | 1.11   | 0.91   |
 
-#### Actual vs Predicted Anxiety (Linear Regression)
+---
+![output (1)](https://github.com/user-attachments/assets/4d23af94-f27c-4516-8bbc-ffddfc04c8db)
 
-![image](https://github.com/user-attachments/assets/53422f68-dd31-48e5-8360-ca1ecbae3358)
+
+![output (2)](https://github.com/user-attachments/assets/7c90c0ab-8477-4ad7-a6c2-3469f8b6ce11)
+
+### Interpretation
+
+SVR captured a substantial portion of the variance in depression rates, with an R² score of 0.52, indicating a moderate predictive ability. The model also demonstrated a lower prediction error, with RMSE and MAE values suggesting reasonable accuracy.
+
+Anxiety prediction performance was lower (R² = 0.14), but still showed signs of a weak association between air pollution variables and anxiety prevalence. This suggests that while there may be a relationship, it is likely influenced by other factors not present in the dataset.
+
+---
+
+### Conclusion
+
+Support Vector Regression is a suitable approach for exploring the relationship between air pollution and mental health outcomes. Its ability to capture non-linear patterns made it particularly effective in modeling depression prevalence. Although the results for anxiety were less strong, they indicate potential for further investigation. Incorporating additional contextual features, such as economic or cultural indicators, could enhance the model's predictive power in future work.
+
 
 * * *
 
