@@ -355,11 +355,46 @@ While multiple statistically significant relationships were identified, most sho
 
 
 ---
-## 🧠 Final Note
+##  Final Note
 
 This project stems from a personal and academic interest in understanding the **invisible connections between our environment and our minds**. Living in an area like Gebze, where air pollution is a daily reality, raises the question:
 
 > *Can the air we breathe affect our mood, our focus, our mental state?*
 
 Using global datasets and analytical tools, this project takes a step toward answering that question.
+
+
+
+---
+
+### 🔍 Model Performance Summary
+
+| Model                  | Target     | R² Score | RMSE | MAE |
+|------------------------|------------|----------|------|-----|
+| SVR (RBF Kernel)       | Depression | 0.52     | 0.50 | 0.41 |
+|                        | Anxiety    | 0.14     | 1.11 | 0.91 |
+| Random Forest          | Depression | 0.54     | 0.49 | 0.39 |
+|                        | Anxiety    | 0.35     | 0.97 | 0.73 |
+| Gradient Boosted Trees | Depression | 0.53     | 0.50 | 0.40 |
+|                        | Anxiety    | 0.30     | 1.00 | 0.70 |
+
+---
+
+###  Clarification on Kernel Functions (SVR)
+
+A **kernel function** maps input features into a higher-dimensional space, enabling models like SVR to capture complex, nonlinear relationships. The RBF kernel, in particular, measures similarity between data points based on distance, allowing SVR to define flexible boundaries even in small datasets.
+
+---
+
+###  Clarified SVR Conclusion
+
+Anxiety results were weaker (R² = 0.14), suggesting that pollution alone is insufficient as a predictor — social, economic, or healthcare variables may play a larger role.
+
+---
+
+###  Random Forest - Additional Insight
+
+The model's ability to explain over half the variation in depression and one-third for anxiety confirms the usefulness of tree-based models in this context.
+
+---
 
